@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "v1",
+  "project": {
+    "name": "TBD",
+    "description": "TBD",
+    "domain": "TBD",
+    "owner": "TBD"
+  },
+  "stack": {
+    "backend": {
+      "framework": "NestJS",
+      "language": "TypeScript",
+      "runtime": "TBD",
+      "version": "TBD",
+      "not_used": false
+    },
+    "frontend": {
+      "framework": "NextJS",
+      "language": "TBD",
+      "stateManagement": "TBD",
+      "styling": "Material UI",
+      "not_used": false
+    },
+    "database": {
+      "type": "PostgreSQL",
+      "orm": "TypeORM",
+      "migrationStrategy": "TBD",
+      "not_used": false
+    }
+  },
+  "architecture": {
+    "style": "TBD",
+    "modulesPattern": "TBD",
+    "sharedPattern": "TBD",
+    "configPattern": "TBD",
+    "apiStyle": "REST"
+  },
+  "security": {
+    "authentication": "TBD",
+    "authorization": "TBD",
+    "secretsManagement": "TBD",
+    "rateLimit": false,
+    "refreshToken": false,
+    "auditing": false
+  },
+  "testing": {
+    "backend": {
+      "framework": "TBD",
+      "helpers": [],
+      "optional": [],
+      "coverageTarget": 0
+    },
+    "frontend": {
+      "unit": [
+        "TBD"
+      ],
+      "component": [
+        "TBD"
+      ],
+      "e2e": [
+        "TBD"
+      ]
+    }
+  },
+  "deployment": {
+    "containerized": false,
+    "ci": "TBD",
+    "cd": "TBD",
+    "hosting": "TBD",
+    "environments": [
+      "TBD"
+    ],
+    "rolloutStrategy": "TBD"
+  },
+  "nonFunctional": {
+    "expectedUsers": 0,
+    "scalability": "TBD",
+    "availability": "TBD",
+    "latency": "TBD",
+    "compliance": []
+  },
+  "requirements": {
+    "functional": [
+      "TBD"
+    ],
+    "constraints": [],
+    "outOfScope": []
+  },
+  "assumptions": [
+    "Unspecified: project name: TBD",
+    "Unspecified: project description: TBD",
+    "Unspecified: runtime: TBD",
+    "Unspecified: state management: TBD",
+    "Unspecified: migration strategy: TBD",
+    "Unspecified: architecture style: TBD",
+    "Unspecified: modules pattern: TBD",
+    "Unspecified: shared pattern: TBD",
+    "Unspecified: config pattern: TBD",
+    "Unspecified: testing tools: TBD",
+    "Unspecified: deployment strategy: TBD",
+    "Unspecified: performance: TBD",
+    "Unspecified: scalability: TBD",
+    "Unspecified: maintainability: TBD",
+    "Unspecified: security: TBD"
+  ]
+}
