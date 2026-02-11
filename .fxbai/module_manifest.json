@@ -1,0 +1,307 @@
+{
+  "schemaVersion": "v1",
+  "projectId": "mergeguard-ai",
+  "modules": [
+    {
+      "id": "cce268ea-8da8-4199-b15a-56d3ad07a5f7",
+      "name": "auth",
+      "type": "api-module",
+      "status": "pending",
+      "path": "server/src/modules/auth",
+      "files": [],
+      "dependencies": [],
+      "dependents": [
+        "user"
+      ],
+      "metadata": {
+        "description": "Handles user authentication and authorization using JWT.",
+        "version": "1.0.0",
+        "tags": [
+          "login",
+          "registration",
+          "token management"
+        ]
+      },
+      "packages": {
+        "dependencies": [
+          "@nestjs/jwt",
+          "@nestjs/passport",
+          "passport",
+          "passport-jwt"
+        ],
+        "devDependencies": []
+      },
+      "config": {
+        "env": [
+          "JWT_SECRET=example"
+        ],
+        "scripts": {}
+      },
+      "createdAt": "2026-02-11T05:02:33.261Z",
+      "updatedAt": "2026-02-11T05:02:33.261Z",
+      "generationLog": [
+        {
+          "timestamp": "2026-02-11T05:02:33.261Z",
+          "action": "created",
+          "message": "Auto-detected from blueprint (priority: high)"
+        }
+      ]
+    },
+    {
+      "id": "b9d2daa2-fcaa-4eea-9047-afc49c556056",
+      "name": "user",
+      "type": "api-module",
+      "status": "pending",
+      "path": "server/src/modules/user",
+      "files": [],
+      "dependencies": [
+        "auth"
+      ],
+      "dependents": [
+        "post"
+      ],
+      "metadata": {
+        "description": "Manages user data and profiles.",
+        "version": "1.0.0",
+        "tags": [
+          "create user",
+          "update user",
+          "get user details"
+        ]
+      },
+      "packages": {
+        "dependencies": [
+          "class-validator",
+          "class-transformer"
+        ],
+        "devDependencies": []
+      },
+      "config": {
+        "env": [],
+        "scripts": {}
+      },
+      "createdAt": "2026-02-11T05:02:33.261Z",
+      "updatedAt": "2026-02-11T05:02:33.261Z",
+      "generationLog": [
+        {
+          "timestamp": "2026-02-11T05:02:33.261Z",
+          "action": "created",
+          "message": "Auto-detected from blueprint (priority: high)"
+        }
+      ]
+    },
+    {
+      "id": "8440c9e6-682f-40e6-9bb2-39cd2abc1baa",
+      "name": "common",
+      "type": "util",
+      "status": "pending",
+      "path": "server/src/modules/common",
+      "files": [],
+      "dependencies": [],
+      "dependents": [],
+      "metadata": {
+        "description": "Provides common utilities and helpers used across modules.",
+        "version": "1.0.0",
+        "tags": [
+          "logging",
+          "error handling"
+        ]
+      },
+      "packages": {
+        "dependencies": [],
+        "devDependencies": []
+      },
+      "config": {
+        "env": [],
+        "scripts": {}
+      },
+      "createdAt": "2026-02-11T05:02:33.261Z",
+      "updatedAt": "2026-02-11T05:02:33.261Z",
+      "generationLog": [
+        {
+          "timestamp": "2026-02-11T05:02:33.261Z",
+          "action": "created",
+          "message": "Auto-detected from blueprint (priority: medium)"
+        }
+      ]
+    },
+    {
+      "id": "2fc88b25-dacd-4313-96e8-994e0184e341",
+      "name": "post",
+      "type": "api-module",
+      "status": "pending",
+      "path": "server/src/modules/post",
+      "files": [],
+      "dependencies": [
+        "user"
+      ],
+      "dependents": [],
+      "metadata": {
+        "description": "Handles blog post creation, retrieval, and management.",
+        "version": "1.0.0",
+        "tags": [
+          "create post",
+          "get posts",
+          "update post"
+        ]
+      },
+      "packages": {
+        "dependencies": [
+          "typeorm"
+        ],
+        "devDependencies": []
+      },
+      "config": {
+        "env": [],
+        "scripts": {}
+      },
+      "createdAt": "2026-02-11T05:02:33.261Z",
+      "updatedAt": "2026-02-11T05:02:33.261Z",
+      "generationLog": [
+        {
+          "timestamp": "2026-02-11T05:02:33.261Z",
+          "action": "created",
+          "message": "Auto-detected from blueprint (priority: medium)"
+        }
+      ]
+    },
+    {
+      "id": "8a789f0f-1c15-4fe6-91dc-c91b883ba278",
+      "name": "frontend-layout",
+      "type": "layout",
+      "status": "pending",
+      "path": "client/src/app/layouts/main-layout",
+      "files": [],
+      "dependencies": [],
+      "dependents": [],
+      "metadata": {
+        "description": "Main layout component for the application.",
+        "version": "1.0.0",
+        "tags": [
+          "header",
+          "footer",
+          "sidebar"
+        ]
+      },
+      "packages": {
+        "dependencies": [
+          "@mui/material"
+        ],
+        "devDependencies": []
+      },
+      "config": {
+        "env": [],
+        "scripts": {}
+      },
+      "createdAt": "2026-02-11T05:02:33.261Z",
+      "updatedAt": "2026-02-11T05:02:33.261Z",
+      "generationLog": [
+        {
+          "timestamp": "2026-02-11T05:02:33.261Z",
+          "action": "created",
+          "message": "Auto-detected from blueprint (priority: high)"
+        }
+      ]
+    },
+    {
+      "id": "893f61f0-4a08-4ed2-9192-8c9dc669626b",
+      "name": "frontend-auth",
+      "type": "component",
+      "status": "pending",
+      "path": "client/src/components/auth",
+      "files": [],
+      "dependencies": [],
+      "dependents": [],
+      "metadata": {
+        "description": "Authentication components for login and registration.",
+        "version": "1.0.0",
+        "tags": [
+          "login form",
+          "registration form"
+        ]
+      },
+      "packages": {
+        "dependencies": [
+          "formik",
+          "yup"
+        ],
+        "devDependencies": []
+      },
+      "config": {
+        "env": [],
+        "scripts": {}
+      },
+      "createdAt": "2026-02-11T05:02:33.261Z",
+      "updatedAt": "2026-02-11T05:02:33.261Z",
+      "generationLog": [
+        {
+          "timestamp": "2026-02-11T05:02:33.261Z",
+          "action": "created",
+          "message": "Auto-detected from blueprint (priority: high)"
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-02-11T05:02:26.094Z",
+  "lastModifiedAt": "2026-02-11T05:02:26.094Z",
+  "dependencyGraph": {
+    "cce268ea-8da8-4199-b15a-56d3ad07a5f7": [],
+    "b9d2daa2-fcaa-4eea-9047-afc49c556056": [
+      "auth"
+    ],
+    "8440c9e6-682f-40e6-9bb2-39cd2abc1baa": [],
+    "2fc88b25-dacd-4313-96e8-994e0184e341": [
+      "user"
+    ],
+    "8a789f0f-1c15-4fe6-91dc-c91b883ba278": [],
+    "893f61f0-4a08-4ed2-9192-8c9dc669626b": []
+  },
+  "codeStyle": {
+    "naming": {
+      "files": "kebab-case",
+      "classes": "PascalCase",
+      "functions": "camelCase",
+      "constants": "UPPER_SNAKE_CASE"
+    },
+    "imports": {
+      "order": [
+        "builtin",
+        "external",
+        "internal",
+        "parent",
+        "sibling",
+        "index"
+      ],
+      "pathAliases": {
+        "@app/*": "src/*",
+        "@shared/*": "src/shared/*",
+        "@modules/*": "src/modules/*"
+      }
+    },
+    "formatting": {
+      "indentSize": 2,
+      "useTabs": false,
+      "singleQuote": true,
+      "trailingComma": "all",
+      "semicolons": true
+    }
+  },
+  "hooks": {
+    "preGenerate": [],
+    "postGenerate": [],
+    "onError": []
+  },
+  "statistics": {
+    "totalModules": 6,
+    "totalFiles": 0,
+    "modulesByType": {
+      "api-module": 3,
+      "util": 1,
+      "layout": 1,
+      "component": 1
+    },
+    "modulesByStatus": {
+      "pending": 6
+    }
+  }
+}
