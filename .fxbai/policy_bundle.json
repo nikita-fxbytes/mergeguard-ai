@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "v1",
+  "policies": [
+    {
+      "id": "common-architecture-guidelines",
+      "type": "required",
+      "target": "code-pattern",
+      "value": "MVC architecture is mandatory with strict separation of concerns."
+    },
+    {
+      "id": "common-technology-stack",
+      "type": "required",
+      "target": "config",
+      "value": "Backend: NestJS (TypeScript), PostgreSQL with TypeORM. Frontend: NextJS (TypeScript), Material UI, HTML, CSS."
+    },
+    {
+      "id": "common-security-policies",
+      "type": "required",
+      "target": "config",
+      "value": "Apply the least privileged principle across all layers."
+    },
+    {
+      "id": "common-authentication-authorization",
+      "type": "required",
+      "target": "config",
+      "value": "Use JWT for authentication with short-lived access tokens and long-lived refresh tokens stored in secure HttpOnly cookies."
+    },
+    {
+      "id": "client-api-design-naming",
+      "type": "required",
+      "target": "code-pattern",
+      "value": "RESTful, resource-oriented APIs with URL format: /api/v1/<resource> using lowercase, kebab-case, plural nouns."
+    },
+    {
+      "id": "client-authentication-authorization",
+      "type": "required",
+      "target": "config",
+      "value": "JWT-based authentication with access and refresh tokens stored securely."
+    },
+    {
+      "id": "company-database-schema-standards",
+      "type": "required",
+      "target": "config",
+      "value": "Databases must follow minimum 3NF normalization unless explicitly documented."
+    },
+    {
+      "id": "company-mvc-architecture-guidelines",
+      "type": "required",
+      "target": "code-pattern",
+      "value": "MVC architecture is mandatory with strict separation of concerns."
+    },
+    {
+      "id": "stack-guideline-nestjs",
+      "type": "warning",
+      "target": "code-pattern",
+      "value": "Follow NestJS Coding Standards & Best Practices."
+    },
+    {
+      "id": "stack-guideline-nextjs",
+      "type": "warning",
+      "target": "code-pattern",
+      "value": "Follow Next.js Coding Guidelines."
+    },
+    {
+      "id": "stack-guideline-postgresql",
+      "type": "warning",
+      "target": "code-pattern",
+      "value": "Follow PostgreSQL Guidelines, Rules."
+    },
+    {
+      "id": "stack-guideline-typeorm",
+      "type": "warning",
+      "target": "code-pattern",
+      "value": "Follow TypeORM Universal ORM Guidelines."
+    },
+    {
+      "id": "stack-guideline-material-ui",
+      "type": "warning",
+      "target": "code-pattern",
+      "value": "Follow Material UI Best Practices & Guidelines."
+    },
+    {
+      "id": "metadata",
+      "type": "warning",
+      "target": "config",
+      "value": "{\"extractedStack\":[\"NestJS\",\"TypeScript\",\"PostgreSQL\",\"TypeORM\",\"JWT\",\"Access Token\",\"Refresh Token\",\"REST\",\"HTTPS\",\"Token-based authentication\",\"NextJS\",\"Material UI\",\"HTML\",\"CSS\"],\"selectedStackGuidelineFiles\":[\"Stack Policy Guideline/nestjs guideline.docx\",\"Stack Policy Guideline/nextjs guideline.docx\",\"Stack Policy Guideline/postgresql guideline.docx\",\"Stack Policy Guideline/typeorm guideline.docx\",\"Stack Policy Guideline/material UI (MUI) guidelines.docx\",\"Stack Policy Guideline/typescript guideline.docx\"],\"priorityOrder\":[\"Common Policy\",\"Client Policy\",\"Company Policy\",\"Stack Policy Guideline\"],\"sourceFiles\":{\"common\":[\"Common Policy/common-policy-guideline.md\"],\"client\":[\"Client Policy/client policy document.docx\"],\"company\":[\"Company Policy/company policy guidelines.docx\"],\"stack\":[\"Stack Policy Guideline/nestjs guideline.docx\",\"Stack Policy Guideline/nextjs guideline.docx\",\"Stack Policy Guideline/postgresql guideline.docx\",\"Stack Policy Guideline/typeorm guideline.docx\",\"Stack Policy Guideline/material UI (MUI) guidelines.docx\",\"Stack Policy Guideline/typescript guideline.docx\"]}}"
+    }
+  ]
+}
