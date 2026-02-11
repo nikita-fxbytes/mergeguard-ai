@@ -1,0 +1,74 @@
+Overview / Purpose  
+This document outlines the mandatory technical, security, and architectural rules to ensure consistent API behavior, strong security practices, scalable and maintainable architecture, and compliance across all backend and frontend contributions.
+
+Scope  
+Applies to all backend and frontend technologies, frameworks, and databases utilized within the organization, specifically focusing on NestJS, TypeScript, PostgreSQL, TypeORM, JWT, NextJS, Material UI, and related technologies.
+
+Governance & Priority  
+1. Common Policy  
+2. Client Policy  
+3. Company Policy  
+4. Stack Policy Guideline  
+
+Security  
+- Apply the least privileged principle across all layers.  
+- Validate, sanitize, and encode all client input.  
+- Secrets must never be hardcoded; use environment variables only.  
+- HTTPS is mandatory for all APIs.  
+- CORS must be explicitly configured, allowing only whitelisted frontend origins and required HTTP methods.  
+- Sensitive operations require re-authentication.  
+- Use JWT for authentication with short-lived access tokens and long-lived refresh tokens stored in secure HttpOnly cookies.  
+- Role-based access control (RBAC) is required, with permission checks at controller and guard levels.  
+- No protected API without a valid access token.  
+
+Backend Guidelines  
+- MVC architecture is mandatory with strict separation of concerns.  
+- Request flow: Request → Controller → Service → Model → Data Source → View → Response.  
+- All business logic must reside in Services, which manage rules, transactions, and multi-model workflows.  
+- Controllers handle requests, validation, service calls, and responses, remaining thin with no business logic or direct data access.  
+- Models represent business logic and data, containing domain rules, validation, and persistence.  
+- Views handle presentation only, with no business logic or data access allowed.  
+- Every API must use a DTO, with no raw request body access.  
+- Validation must occur before controller execution, enforcing strict typing, formats, and constraints.  
+- Centralized error handling is mandatory, with internal errors never exposed.  
+- Log levels: Info, Warning, Error.  
+- Transactions are required for multi-step or critical operations.  
+- Avoid unnecessary re-renders and optimize API calls.  
+- Pagination is mandatory for list APIs.  
+- Unit tests for business logic are mandatory.  
+- Code must pass linting and formatting checks.  
+
+Frontend Guidelines  
+- Consistency is mandatory across all frontend codebases.  
+- Next.js is the default and mandatory frontend framework for all web applications.  
+- All inputs must be controlled, with validation logic outside UI.  
+- Use Material UI components first, avoiding custom CSS when MUI props solve the problem.  
+- Every reusable component must include purpose, props description, example usage, and accessibility notes.  
+- Use semantic HTML and ensure accessibility compliance.  
+- Avoid hardcoded values in styles; use theme-driven design.  
+- All API calls must live in services, with no API calls in components.  
+- Centralized logging utility must be used, with no direct console.log in production.  
+
+API Standards  
+- APIs must follow RESTful, resource-oriented standards.  
+- URL format: /api/v1/<resource> using lowercase, kebab-case, plural nouns with no verbs in URLs.  
+- Standard response format must be used for success and error responses.  
+- Validation must occur before business logic execution, with invalid requests returning a 400 status.  
+- Every external input must have a DTO, ensuring immutability and no logic.  
+- Use JWT or OAuth2 only for authentication, with access tokens stored securely.  
+
+Code Quality & Reviews  
+- Code reviews must verify security rules, naming conventions, DTO usage, and response structure.  
+- Violations must be fixed before merge.  
+- AI-generated code must comply with the same standards as human-written code, ensuring security, reusability, documentation, and testability.  
+
+Testing / Release  
+- Unit tests for business logic are mandatory.  
+- Edge cases and error paths must be tested.  
+- Coverage minimum of 80% is required for services and controllers.  
+
+Compliance Checklist  
+- All database changes require code review and schema validation.  
+- Non-compliance is a policy violation.  
+- Regular vulnerability scans and security reviews are mandatory.  
+- Documentation must be maintained for all APIs, components, and services.  
